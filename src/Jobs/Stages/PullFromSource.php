@@ -3,12 +3,13 @@
 namespace Matchish\ScoutElasticSearch\Jobs\Stages;
 
 use Illuminate\Support\Collection;
+use Matchish\ScoutElasticSearch\Creator\ProxyClient;
 use Matchish\ScoutElasticSearch\Searchable\ImportSource;
 
 /**
  * @internal
  */
-final class PullFromSource
+final class PullFromSource implements StageInterface
 {
     /**
      * @var ImportSource
@@ -23,7 +24,7 @@ final class PullFromSource
         $this->source = $source;
     }
 
-    public function handle(): void
+    public function handle(?ProxyClient $elasticsearch = null): void
     {
         $results = $this->source->get()->filter->shouldBeSearchable();
         if (! $results->isEmpty()) {

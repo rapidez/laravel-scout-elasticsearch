@@ -21,7 +21,9 @@ final class ElasticSearchServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/elasticsearch.php', 'elasticsearch');
 
         $this->app->bind(ProxyClient::class, function () {
-            $clientBuilder = ProxyClientBuilder::create()->setHosts(Config::hosts());
+            $clientBuilder = ProxyClientBuilder::create()
+                ->setHosts(Config::hosts())
+                ->setSSLVerification(Config::sslVerification());
             if ($user = Config::user()) {
                 $clientBuilder->setBasicAuthentication($user, Config::password());
             }

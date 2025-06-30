@@ -4,7 +4,57 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/)
 
-## [Unreleased]
+## [7.11.1] - 2025-05-02
+### Added
+- Support for legacy environment variables from `mailerlite/laravel-elasticsearch`, allowing smoother migration without requiring `.env` changes. [#XXX]([link-to-pr](https://github.com/matchish/laravel-scout-elasticsearch/pull/307))
+
+## [7.11.0] - 2025-02-20
+### Fixed
+- SearchFactory adds empty `query_string` query even if query string is empty when no `where` clauses are set.
+- DefaultImportSource do not work properly with model that have complex scopes https://github.com/matchish/laravel-scout-elasticsearch/pull/298
+
+## [7.10.0] - 2024-12-12
+### Added
+- Use [`source` in options](https://github.com/matchish/laravel-scout-elasticsearch/pull/293) to set returned fields
+
+## [7.9.0] - 2024-11-14
+### Fixed
+- [Using pagination with custom query in Scout Builder](https://github.com/matchish/laravel-scout-elasticsearch/pull/290).
+### Added
+- [Using `options()` of a builder](https://github.com/matchish/laravel-scout-elasticsearch/issues/252) for set `from` parameter.
+- Supporting `take()` method of builder for setting response `size`.
+
+## [7.8.0] - 2024-06-24
+### Added
+- [Added supports of whereNotIn condition](https://github.com/matchish/laravel-scout-elasticsearch/pull/282).
+
+## [7.6.2] - 2024-06-24
+### Fixed
+- [Change if conditions order in soft deletes check for compatibility](https://github.com/matchish/laravel-scout-elasticsearch/pull/282).
+
+## [7.6.1] - 2024-05-14
+### Fixed
+- fix for [parser incompatibility](https://github.com/matchish/laravel-scout-elasticsearch/issues/273)
+
+## [7.6.0] - 2024-02-23
+### Added
+- Add one more condition. If the search() method does not pass any parameter, there is no need to add QueryStringQuery object.
+  
+## [7.5.0] - 2023-11-30
+### Added
+- [Added support for php 8.3](https://github.com/matchish/laravel-scout-elasticsearch/pull/266)
+  
+## [7.3.0] - 2023-07-31
+### Added
+- [Added support for `makeSearchableUsing` in Laravel Scout. This allows you to prepare and modify a collection of models before they are made searchable. For example, you may want to eager load a relationship so that the relationship data can be efficiently added to your search index.](https://github.com/matchish/laravel-scout-elasticsearch/pull/253)
+
+## [7.2.2] - 2023-06-06
+### Fixed
+- [No duplicates in search on reindex anymore. updates/inserts will be visible only after reindex. For most projects should be ok but for some could be breaking changes](https://github.com/matchish/laravel-scout-elasticsearch/issues/247)
+
+## [7.0.0] - 2023-02-01
+### Changed
+- No duplicates in search on reindex anymore. updates/inserts will be visible only after reindex. For most projects should be ok but for some could be breaking changes
 
 ## [6.0.2] - 2022-06-16
 ### Added

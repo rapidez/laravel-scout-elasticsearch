@@ -72,6 +72,22 @@ class Storage
     }
 
     /**
+     * @return bool
+     */
+    public function sslVerification(): bool
+    {
+        return (bool) ($this->loadConfig('ssl_verification') ?? true);
+    }
+
+    /**
+     * @return ?int
+     */
+    public function queueTimeout(): ?int
+    {
+        return (int) $this->loadConfig('queue.timeout') ?: null;
+    }
+
+    /**
      * @param  string  $path
      * @return mixed
      */

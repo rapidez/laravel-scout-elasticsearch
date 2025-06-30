@@ -14,7 +14,7 @@ use OpenSearch\Common\Exceptions\Missing404Exception;
 /**
  * @internal
  */
-final class CleanUp
+final class CleanUp implements StageInterface
 {
     /**
      * @var ImportSource

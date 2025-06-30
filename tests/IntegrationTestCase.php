@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use App\Product;
 use Elastic\Elasticsearch\Client;
 use Matchish\ScoutElasticSearch\Creator\ProxyClient;
 
@@ -47,5 +48,6 @@ class IntegrationTestCase extends TestCase
                 ],
             ],
         ]);
+        Product::preventAccessingMissingAttributes();
     }
 }

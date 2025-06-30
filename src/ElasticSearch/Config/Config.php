@@ -8,6 +8,8 @@ namespace Matchish\ScoutElasticSearch\ElasticSearch\Config;
  * @method static password()
  * @method static elasticCloudId()
  * @method static apiKey()
+ * @method static sslVerification()
+ * @method static queueTimeout()
  * @method static backendType()
  */
 class Config
