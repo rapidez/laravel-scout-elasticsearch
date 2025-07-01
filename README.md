@@ -4,7 +4,6 @@
 
   <p align="center">
     <a href="#"><img src="https://github.com/rapidez/laravel-scout-elasticsearch/actions/workflows/test-application.yaml/badge.svg" alt="Build Status"></img></a>
-    <a href="https://app.codecov.io/gh/rapidez/laravel-scout-elasticsearch"><img src="https://codecov.io/gh/rapidez/laravel-scout-elasticsearch/branch/coverage-badge/graph/badge.svg" alt="Coverage"></img></a>
     <a href="https://packagist.org/packages/rapidez/laravel-scout-elasticsearch"><img src="https://poser.pugx.org/rapidez/laravel-scout-elasticsearch/d/total.svg" alt="Total Downloads"></a>
     <a href="https://packagist.org/packages/rapidez/laravel-scout-elasticsearch"><img src="https://poser.pugx.org/rapidez/laravel-scout-elasticsearch/v/stable.svg" alt="Latest Version"></a>
     <a href="https://packagist.org/packages/rapidez/laravel-scout-elasticsearch"><img src="https://poser.pugx.org/rapidez/laravel-scout-elasticsearch/license.svg" alt="License"></a>
