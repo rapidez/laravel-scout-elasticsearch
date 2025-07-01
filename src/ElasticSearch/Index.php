@@ -2,6 +2,7 @@
 
 namespace Matchish\ScoutElasticSearch\ElasticSearch;
 
+use Matchish\ScoutElasticSearch\ElasticSearch\Config\Config;
 use Matchish\ScoutElasticSearch\Searchable\ImportSource;
 
 /**
@@ -9,6 +10,11 @@ use Matchish\ScoutElasticSearch\Searchable\ImportSource;
  */
 final class Index
 {
+    public const ELASTICSEARCH_TO_OPENSEARCH_FIELD_TYPE = [
+        'flattened' => 'flat_object',
+        'dense_vector' => 'knn_vector',
+    ];
+
     /**
      * @var array
      */
@@ -38,7 +44,7 @@ final class Index
     {
         $this->name = $name;
         $this->settings = $settings;
-        $this->mappings = $mappings;
+        $this->mappings = self::transformMapping($mappings);
     }
 
     /**
@@ -98,5 +104,76 @@ final class Index
         $mappings = config($mappingsConfigKey, config('elasticsearch.indices.mappings.default'));
 
         return new static($name, $settings, $mappings);
+    }
+
+    public static function transformMapping(?array $mappings): ?array
+    {
+        if (!$mappings) {
+            return $mappings;
+        }
+
+        if(Config::backendType() === 'elasticsearch') {
+            return self::transformOpensearchToElasticsearchMapping($mappings);
+        }
+        return self::transformElasticsearchToOpensearchMapping($mappings);
+    }
+
+    public static function transformElasticsearchToOpensearchMapping(?array $mappings): ?array
+    {
+        if (!$mappings) {
+            return $mappings;
+        }
+
+        $opensearchMapping = self::ELASTICSEARCH_TO_OPENSEARCH_FIELD_TYPE;
+
+        $mappings['properties'] = array_map(function ($mapping) use ($opensearchMapping) {
+            $type = $opensearchMapping[$mapping['type'] ?? ''] ?? '';
+            if (!$type) {
+                return $mapping;
+            }
+            if ($mapping['type'] === 'dense_vector' && $type === 'knn_vector') {
+                $mapping['data_type'] = $mapping['element_type'] ?? null;
+                $mapping['dimension'] = $mapping['dims'] ?? null;
+                unset($mapping['element_type']);
+                unset($mapping['dims']);
+                $mapping = array_filter($mapping);
+            }
+
+            $mapping['type'] = $type;
+
+            return $mapping;
+        }, $mappings['properties'] ?? []);
+
+        return $mappings;
+    }
+
+    public static function transformOpensearchToElasticsearchMapping(?array $mappings): ?array
+    {
+        if (!$mappings) {
+            return $mappings;
+        }
+
+        $opensearchMapping = array_flip(self::ELASTICSEARCH_TO_OPENSEARCH_FIELD_TYPE);
+
+        $mappings['properties'] = array_map(function ($mapping) use ($opensearchMapping) {
+            $type = $opensearchMapping[$mapping['type'] ?? ''] ?? '';
+            if (!$type) {
+                return $mapping;
+            }
+            if ($mapping['type'] === 'dense_vector' && $type === 'knn_vector') {
+                $mapping['element_type'] = $mapping['data_type'];
+                $mapping['dims'] = $mapping['dimension'];
+                unset($mapping['data_type']);
+                unset($mapping['dimension']);
+                array_filter($mapping);
+                $mapping = array_filter($mapping);
+            }
+
+            $mapping['type'] = $type;
+
+            return $mapping;
+        }, $mappings['properties'] ?? []);
+
+        return $mappings;
     }
 }
