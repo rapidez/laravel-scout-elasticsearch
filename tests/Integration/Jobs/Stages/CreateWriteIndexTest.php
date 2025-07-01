@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Tests\Integration\Jobs\Stages;
 
 use App\Product;
-use Matchish\ScoutElasticSearch\Creator\Helper;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\Exception\ClientResponseException;
 use Elastic\Elasticsearch\Exception\ServerResponseException;
-use Matchish\ScoutElasticSearch\ElasticSearch\Index;
-use Matchish\ScoutElasticSearch\Jobs\Stages\CreateWriteIndex;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Index;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\CreateWriteIndex;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
 use Tests\IntegrationTestCase;
 
 final class CreateWriteIndexTest extends IntegrationTestCase

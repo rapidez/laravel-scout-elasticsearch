@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use Laravel\Scout\Searchable;
-use Matchish\ScoutElasticSearch\MixedSearch;
+use Rapidez\ScoutElasticSearch\MixedSearch;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 

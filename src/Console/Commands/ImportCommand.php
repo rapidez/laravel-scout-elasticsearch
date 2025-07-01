@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Matchish\ScoutElasticSearch\Console\Commands;
+namespace Rapidez\ScoutElasticSearch\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Matchish\ScoutElasticSearch\ElasticSearch\Config\Config;
-use Matchish\ScoutElasticSearch\Jobs\Import;
-use Matchish\ScoutElasticSearch\Jobs\QueueableJob;
-use Matchish\ScoutElasticSearch\Searchable\ImportSource;
-use Matchish\ScoutElasticSearch\Searchable\ImportSourceFactory;
-use Matchish\ScoutElasticSearch\Searchable\SearchableListFactory;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Config\Config;
+use Rapidez\ScoutElasticSearch\Jobs\Import;
+use Rapidez\ScoutElasticSearch\Jobs\QueueableJob;
+use Rapidez\ScoutElasticSearch\Searchable\ImportSource;
+use Rapidez\ScoutElasticSearch\Searchable\ImportSourceFactory;
+use Rapidez\ScoutElasticSearch\Searchable\SearchableListFactory;
 
 final class ImportCommand extends Command
 {

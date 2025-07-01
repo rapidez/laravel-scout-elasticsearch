@@ -1,15 +1,15 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Jobs;
+namespace Rapidez\ScoutElasticSearch\Jobs;
 
 use Illuminate\Support\Collection;
-use Matchish\ScoutElasticSearch\ElasticSearch\Index;
-use Matchish\ScoutElasticSearch\Jobs\Stages\CleanUp;
-use Matchish\ScoutElasticSearch\Jobs\Stages\CreateWriteIndex;
-use Matchish\ScoutElasticSearch\Jobs\Stages\PullFromSource;
-use Matchish\ScoutElasticSearch\Jobs\Stages\RefreshIndex;
-use Matchish\ScoutElasticSearch\Jobs\Stages\SwitchToNewAndRemoveOldIndex;
-use Matchish\ScoutElasticSearch\Searchable\ImportSource;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Index;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\CleanUp;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\CreateWriteIndex;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\PullFromSource;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\RefreshIndex;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\SwitchToNewAndRemoveOldIndex;
+use Rapidez\ScoutElasticSearch\Searchable\ImportSource;
 
 class ImportStages extends Collection
 {

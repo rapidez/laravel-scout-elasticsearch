@@ -1,13 +1,13 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Jobs;
+namespace Rapidez\ScoutElasticSearch\Jobs;
 
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
 use Illuminate\Bus\Queueable;
 use Illuminate\Support\Collection;
-use Matchish\ScoutElasticSearch\Jobs\Stages\StageInterface;
-use Matchish\ScoutElasticSearch\ProgressReportable;
-use Matchish\ScoutElasticSearch\Searchable\ImportSource;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\StageInterface;
+use Rapidez\ScoutElasticSearch\ProgressReportable;
+use Rapidez\ScoutElasticSearch\Searchable\ImportSource;
 
 /**
  * @internal

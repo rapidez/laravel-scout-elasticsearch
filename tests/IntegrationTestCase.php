@@ -4,7 +4,7 @@ namespace Tests;
 
 use App\Product;
 use Elastic\Elasticsearch\Client;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
 
 /**
  * Class IntegrationTestCase.

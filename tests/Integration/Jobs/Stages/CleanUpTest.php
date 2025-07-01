@@ -3,9 +3,9 @@
 namespace Tests\Integration\Jobs\Stages;
 
 use App\Product;
-use Matchish\ScoutElasticSearch\Creator\Helper;
-use Matchish\ScoutElasticSearch\Jobs\Stages\CleanUp;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\CleanUp;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
 use stdClass;
 use Tests\IntegrationTestCase;
 

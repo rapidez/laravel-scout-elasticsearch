@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\ElasticSearch\Config;
+namespace Rapidez\ScoutElasticSearch\ElasticSearch\Config;
 
 /**
  * @method static array hosts()

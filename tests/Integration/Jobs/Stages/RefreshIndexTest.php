@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Integration\Jobs\Stages;
 
-use Matchish\ScoutElasticSearch\Creator\Helper;
-use Matchish\ScoutElasticSearch\ElasticSearch\Index;
-use Matchish\ScoutElasticSearch\Jobs\Stages\RefreshIndex;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Index;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\RefreshIndex;
 use stdClass;
 use Tests\IntegrationTestCase;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\ElasticSearch;
+namespace Rapidez\ScoutElasticSearch\ElasticSearch;
 
-use Matchish\ScoutElasticSearch\ElasticSearch\Config\Config;
-use Matchish\ScoutElasticSearch\Searchable\ImportSource;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Config\Config;
+use Rapidez\ScoutElasticSearch\Searchable\ImportSource;
 
 /**
  * @internal

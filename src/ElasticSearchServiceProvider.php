@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Matchish\ScoutElasticSearch;
+namespace Rapidez\ScoutElasticSearch;
 
 use Illuminate\Support\ServiceProvider;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
-use Matchish\ScoutElasticSearch\Creator\ProxyClientBuilder;
-use Matchish\ScoutElasticSearch\ElasticSearch\Config\Config;
-use Matchish\ScoutElasticSearch\ElasticSearch\EloquentHitsIteratorAggregate;
-use Matchish\ScoutElasticSearch\ElasticSearch\HitsIteratorAggregate;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClientBuilder;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Config\Config;
+use Rapidez\ScoutElasticSearch\ElasticSearch\EloquentHitsIteratorAggregate;
+use Rapidez\ScoutElasticSearch\ElasticSearch\HitsIteratorAggregate;
 
 final class ElasticSearchServiceProvider extends ServiceProvider
 {

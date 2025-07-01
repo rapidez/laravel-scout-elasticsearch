@@ -3,7 +3,7 @@
 namespace Tests\Unit\ElasticSearch\Config;
 
 use Illuminate\Support\Facades\Config;
-use Matchish\ScoutElasticSearch\ElasticSearch\Config\Config as ScoutConfig;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Config\Config as ScoutConfig;
 use Tests\TestCase;
 
 class ConfigTest extends TestCase

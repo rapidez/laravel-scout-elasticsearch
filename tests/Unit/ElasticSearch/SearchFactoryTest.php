@@ -6,7 +6,7 @@ namespace Tests\Unit\ElasticSearch;
 
 use App\Product;
 use Laravel\Scout\Builder;
-use Matchish\ScoutElasticSearch\ElasticSearch\SearchFactory;
+use Rapidez\ScoutElasticSearch\ElasticSearch\SearchFactory;
 use Tests\TestCase;
 
 class SearchFactoryTest extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\ElasticSearch;
+namespace Rapidez\ScoutElasticSearch\ElasticSearch;
 
 use Illuminate\Support\Arr;
 use Laravel\Scout\Builder;

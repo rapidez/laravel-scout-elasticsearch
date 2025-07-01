@@ -1,13 +1,13 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Jobs\Stages;
+namespace Rapidez\ScoutElasticSearch\Jobs\Stages;
 
 use Elastic\Elasticsearch\Exception\ClientResponseException;
-use Matchish\ScoutElasticSearch\Creator\Helper;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Indices\Alias\Get as GetAliasParams;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Indices\Delete as DeleteIndexParams;
-use Matchish\ScoutElasticSearch\Searchable\ImportSource;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Indices\Alias\Get as GetAliasParams;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Indices\Delete as DeleteIndexParams;
+use Rapidez\ScoutElasticSearch\Searchable\ImportSource;
 use OpenSearch\Common\Exceptions\ClientErrorResponseException;
 use OpenSearch\Common\Exceptions\Missing404Exception;
 

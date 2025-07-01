@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Searchable;
+namespace Rapidez\ScoutElasticSearch\Searchable;
 
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Support\Collection;

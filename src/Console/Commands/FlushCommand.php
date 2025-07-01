@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Matchish\ScoutElasticSearch\Console\Commands;
+namespace Rapidez\ScoutElasticSearch\Console\Commands;
 
 use Illuminate\Console\Command;
-use Matchish\ScoutElasticSearch\Searchable\SearchableListFactory;
+use Rapidez\ScoutElasticSearch\Searchable\SearchableListFactory;
 
 final class FlushCommand extends Command
 {

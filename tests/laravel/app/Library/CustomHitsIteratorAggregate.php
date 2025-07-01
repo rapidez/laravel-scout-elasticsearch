@@ -2,7 +2,7 @@
 
 namespace App\Library;
 
-use Matchish\ScoutElasticSearch\ElasticSearch\HitsIteratorAggregate;
+use Rapidez\ScoutElasticSearch\ElasticSearch\HitsIteratorAggregate;
 
 class CustomHitsIteratorAggregate implements HitsIteratorAggregate
 {

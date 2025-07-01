@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Engines;
+namespace Rapidez\ScoutElasticSearch\Engines;
 
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\Exception\ServerResponseException;
@@ -9,14 +9,14 @@ use Illuminate\Support\LazyCollection;
 use Laravel\Scout\Builder;
 use Laravel\Scout\Builder as BaseBuilder;
 use Laravel\Scout\Engines\Engine;
-use Matchish\ScoutElasticSearch\Creator\Helper;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
-use Matchish\ScoutElasticSearch\ElasticSearch\HitsIteratorAggregate;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Bulk;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Indices\Refresh;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Search as SearchParams;
-use Matchish\ScoutElasticSearch\ElasticSearch\SearchFactory;
-use Matchish\ScoutElasticSearch\ElasticSearch\SearchResults;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\ElasticSearch\HitsIteratorAggregate;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Bulk;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Indices\Refresh;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Search as SearchParams;
+use Rapidez\ScoutElasticSearch\ElasticSearch\SearchFactory;
+use Rapidez\ScoutElasticSearch\ElasticSearch\SearchResults;
 use ONGR\ElasticsearchDSL\Query\MatchAllQuery;
 use ONGR\ElasticsearchDSL\Search;
 

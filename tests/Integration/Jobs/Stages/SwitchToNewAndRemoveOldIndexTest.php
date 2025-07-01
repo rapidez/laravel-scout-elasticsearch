@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Tests\Integration\Jobs\Stages;
 
 use App\Product;
-use Matchish\ScoutElasticSearch\Creator\Helper;
-use Matchish\ScoutElasticSearch\ElasticSearch\Index;
-use Matchish\ScoutElasticSearch\Jobs\Stages\SwitchToNewAndRemoveOldIndex;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Index;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\SwitchToNewAndRemoveOldIndex;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
 use stdClass;
 use Tests\IntegrationTestCase;
 

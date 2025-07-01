@@ -1,13 +1,13 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Jobs\Stages;
+namespace Rapidez\ScoutElasticSearch\Jobs\Stages;
 
-use Matchish\ScoutElasticSearch\Creator\Helper;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
-use Matchish\ScoutElasticSearch\ElasticSearch\Index;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Indices\Alias\Get;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Indices\Alias\Update;
-use Matchish\ScoutElasticSearch\Searchable\ImportSource;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Index;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Indices\Alias\Get;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Indices\Alias\Update;
+use Rapidez\ScoutElasticSearch\Searchable\ImportSource;
 
 /**
  * @internal

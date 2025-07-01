@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Creator;
+namespace Rapidez\ScoutElasticSearch\Creator;
 
 use OpenSearch\Client as OpenSearchClient;
 use OpenSearch\ClientBuilder as OpenSearchClientBuilder;

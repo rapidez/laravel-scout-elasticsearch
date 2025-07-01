@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Exceptions;
+namespace Rapidez\ScoutElasticSearch\Exceptions;
 
 use Exception;
 

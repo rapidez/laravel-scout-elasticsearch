@@ -1,10 +1,10 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Jobs;
+namespace Rapidez\ScoutElasticSearch\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Matchish\ScoutElasticSearch\ProgressReportable;
+use Rapidez\ScoutElasticSearch\ProgressReportable;
 
 class QueueableJob implements ShouldQueue
 {

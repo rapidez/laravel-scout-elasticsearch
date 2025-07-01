@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Creator;
+namespace Rapidez\ScoutElasticSearch\Creator;
 
 use Elastic\Elasticsearch\Response\Elasticsearch as Response;
 

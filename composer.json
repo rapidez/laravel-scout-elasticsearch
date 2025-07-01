@@ -1,5 +1,5 @@
 {
-    "name": "matchish/laravel-scout-elasticsearch",
+    "name": "rapidez/laravel-scout-elasticsearch",
     "description": "Search among multiple models with ElasticSearch and Laravel Scout",
     "keywords": [
         "laravel",
@@ -40,13 +40,13 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Matchish\\ScoutElasticSearch\\": "src/"
+            "Rapidez\\ScoutElasticSearch\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Matchish\\ScoutElasticSearch\\ScoutElasticSearchServiceProvider"
+                "Rapidez\\ScoutElasticSearch\\ScoutElasticSearchServiceProvider"
             ]
         }
     },

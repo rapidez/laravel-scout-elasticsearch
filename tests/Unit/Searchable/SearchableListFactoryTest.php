@@ -4,7 +4,7 @@ namespace Tests\Unit\Searchable;
 
 use App\Ticket;
 use App\Traits\Searchable;
-use Matchish\ScoutElasticSearch\Searchable\SearchableListFactory;
+use Rapidez\ScoutElasticSearch\Searchable\SearchableListFactory;
 use Tests\TestCase;
 
 class SearchableListFactoryTest extends TestCase

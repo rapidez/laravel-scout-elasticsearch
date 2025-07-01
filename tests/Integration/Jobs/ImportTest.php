@@ -4,8 +4,8 @@ namespace Tests\Integration\Jobs;
 
 use App\Product;
 use Illuminate\Console\OutputStyle;
-use Matchish\ScoutElasticSearch\Jobs\Import;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\Jobs\Import;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
 use Symfony\Component\Console\Input\ArrayInput;
 use Tests\Fixtures\DummyOutput;
 use Tests\IntegrationTestCase;

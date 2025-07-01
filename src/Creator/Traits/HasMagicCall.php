@@ -1,8 +1,8 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Creator\Traits;
+namespace Rapidez\ScoutElasticSearch\Creator\Traits;
 
-use Matchish\ScoutElasticSearch\Exceptions\ProxyMethodNotFound;
+use Rapidez\ScoutElasticSearch\Exceptions\ProxyMethodNotFound;
 
 trait HasMagicCall
 {

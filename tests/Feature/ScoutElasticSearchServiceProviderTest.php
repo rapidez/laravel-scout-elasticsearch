@@ -1,10 +1,10 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch;
+namespace Rapidez\ScoutElasticSearch;
 
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\Client as ElasticsearchClient;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
 use OpenSearch\Client as OpenSearchClient;
 use Elastic\Transport\Exception\NoNodeAvailableException;
 use Tests\TestCase;

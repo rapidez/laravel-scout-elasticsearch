@@ -6,8 +6,8 @@ namespace Tests\Feature;
 
 use App\Product;
 use Illuminate\Support\Facades\Artisan;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Bulk;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Indices\Refresh;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Bulk;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Indices\Refresh;
 use Tests\IntegrationTestCase;
 
 final class FlushCommandTest extends IntegrationTestCase

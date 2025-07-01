@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Tests\Integration\Jobs\Stages;
 
 use App\Product;
-use Matchish\ScoutElasticSearch\Jobs\Stages\PullFromSource;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\PullFromSource;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
 use stdClass;
 use Tests\IntegrationTestCase;
 

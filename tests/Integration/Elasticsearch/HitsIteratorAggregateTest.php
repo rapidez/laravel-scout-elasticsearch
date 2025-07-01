@@ -1,10 +1,10 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch;
+namespace Rapidez\ScoutElasticSearch;
 
 use App\Library\CustomHitsIteratorAggregate;
-use Matchish\ScoutElasticSearch\ElasticSearch\EloquentHitsIteratorAggregate;
-use Matchish\ScoutElasticSearch\ElasticSearch\HitsIteratorAggregate;
+use Rapidez\ScoutElasticSearch\ElasticSearch\EloquentHitsIteratorAggregate;
+use Rapidez\ScoutElasticSearch\ElasticSearch\HitsIteratorAggregate;
 use Tests\TestCase;
 
 class HitsIteratorAggregateTest extends TestCase

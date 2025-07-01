@@ -3,13 +3,13 @@
 namespace Tests\Unit\Jobs;
 
 use App\Product;
-use Matchish\ScoutElasticSearch\Jobs\ImportStages;
-use Matchish\ScoutElasticSearch\Jobs\Stages\CleanUp;
-use Matchish\ScoutElasticSearch\Jobs\Stages\CreateWriteIndex;
-use Matchish\ScoutElasticSearch\Jobs\Stages\PullFromSource;
-use Matchish\ScoutElasticSearch\Jobs\Stages\RefreshIndex;
-use Matchish\ScoutElasticSearch\Jobs\Stages\SwitchToNewAndRemoveOldIndex;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\Jobs\ImportStages;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\CleanUp;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\CreateWriteIndex;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\PullFromSource;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\RefreshIndex;
+use Rapidez\ScoutElasticSearch\Jobs\Stages\SwitchToNewAndRemoveOldIndex;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
 use Tests\TestCase;
 
 class ImportStagesTest extends TestCase

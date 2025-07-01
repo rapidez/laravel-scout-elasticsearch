@@ -18,10 +18,10 @@
  * @method setHttpClientOptions(array $options)
  */
 
-namespace Matchish\ScoutElasticSearch\Creator;
+namespace Rapidez\ScoutElasticSearch\Creator;
 
 use Elastic\Elasticsearch\ClientBuilder as ElasticsearchClientBuilder;
-use Matchish\ScoutElasticSearch\Creator\Traits\HasMagicCall;
+use Rapidez\ScoutElasticSearch\Creator\Traits\HasMagicCall;
 use OpenSearch\ClientBuilder as OpenSearchClientBuilder;
 
 final class ProxyClientBuilder implements ProxyInterface

@@ -12,10 +12,10 @@
  * @method sendRequest($request)
  */
 
-namespace Matchish\ScoutElasticSearch\Creator;
+namespace Rapidez\ScoutElasticSearch\Creator;
 
 use Elastic\Elasticsearch\Client as ElasticsearchClient;
-use Matchish\ScoutElasticSearch\Creator\Traits\HasMagicCall;
+use Rapidez\ScoutElasticSearch\Creator\Traits\HasMagicCall;
 use OpenSearch\Client as OpenSearchClient;
 
 final class ProxyClient implements ProxyInterface

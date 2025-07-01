@@ -1,11 +1,11 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Searchable;
+namespace Rapidez\ScoutElasticSearch\Searchable;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Support\Collection;
-use Matchish\ScoutElasticSearch\Database\Scopes\PageScope;
+use Rapidez\ScoutElasticSearch\Database\Scopes\PageScope;
 
 final class DefaultImportSource implements ImportSource
 {

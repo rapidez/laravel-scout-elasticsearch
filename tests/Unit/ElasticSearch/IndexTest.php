@@ -3,8 +3,8 @@
 namespace Tests\Unit\ElasticSearch;
 
 use App\Product;
-use Matchish\ScoutElasticSearch\ElasticSearch\Index;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Index;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
 use Tests\TestCase;
 
 class IndexTest extends TestCase
@@ -16,7 +16,7 @@ class IndexTest extends TestCase
     }
 }
 
-namespace Matchish\ScoutElasticSearch\ElasticSearch;
+namespace Rapidez\ScoutElasticSearch\ElasticSearch;
 
 function time(): int
 {

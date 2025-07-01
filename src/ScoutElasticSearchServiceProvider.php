@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Matchish\ScoutElasticSearch;
+namespace Rapidez\ScoutElasticSearch;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Scout\EngineManager;
 use Laravel\Scout\ScoutServiceProvider;
-use Matchish\ScoutElasticSearch\Console\Commands\FlushCommand;
-use Matchish\ScoutElasticSearch\Console\Commands\ImportCommand;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
-use Matchish\ScoutElasticSearch\Engines\ElasticSearchEngine;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
-use Matchish\ScoutElasticSearch\Searchable\ImportSourceFactory;
+use Rapidez\ScoutElasticSearch\Console\Commands\FlushCommand;
+use Rapidez\ScoutElasticSearch\Console\Commands\ImportCommand;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\Engines\ElasticSearchEngine;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\Searchable\ImportSourceFactory;
 
 final class ScoutElasticSearchServiceProvider extends ServiceProvider
 {

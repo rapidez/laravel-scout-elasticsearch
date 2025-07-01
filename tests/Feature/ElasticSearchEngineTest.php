@@ -7,7 +7,7 @@ namespace Tests\Feature;
 use App\Product;
 use Elastic\Elasticsearch\Client;
 use Illuminate\Support\Facades\Artisan;
-use Matchish\ScoutElasticSearch\Creator\Helper;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
 use Tests\IntegrationTestCase;
 
 final class ElasticSearchEngineTest extends IntegrationTestCase

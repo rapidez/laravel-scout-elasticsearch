@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\ElasticSearch;
+namespace Rapidez\ScoutElasticSearch\ElasticSearch;
 
 use IteratorAggregate;
 use Laravel\Scout\Builder;

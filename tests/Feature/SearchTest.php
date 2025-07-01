@@ -10,7 +10,7 @@ use App\Ticket;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\LazyCollection;
-use Matchish\ScoutElasticSearch\MixedSearch;
+use Rapidez\ScoutElasticSearch\MixedSearch;
 use ONGR\ElasticsearchDSL\Query\TermLevel\RangeQuery;
 use Tests\IntegrationTestCase;
 

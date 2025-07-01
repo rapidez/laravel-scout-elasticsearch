@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch;
+namespace Rapidez\ScoutElasticSearch;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Builder;

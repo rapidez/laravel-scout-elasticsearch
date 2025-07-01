@@ -6,10 +6,10 @@ use App\Product;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Builder;
 use Laravel\Scout\Searchable;
-use Matchish\ScoutElasticSearch\ElasticSearch\Index;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Indices\Create;
-use Matchish\ScoutElasticSearch\Engines\ElasticSearchEngine;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Index;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Indices\Create;
+use Rapidez\ScoutElasticSearch\Engines\ElasticSearchEngine;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSourceFactory;
 use stdClass;
 use Tests\IntegrationTestCase;
 

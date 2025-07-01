@@ -1,8 +1,8 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Creator;
+namespace Rapidez\ScoutElasticSearch\Creator;
 
-use Matchish\ScoutElasticSearch\ElasticSearch\Config\Config;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Config\Config;
 use OpenSearch\ClientBuilder as OpenSearchClientBuilder;
 use Elastic\Elasticsearch\ClientBuilder as ElasticsearchClientBuilder;
 

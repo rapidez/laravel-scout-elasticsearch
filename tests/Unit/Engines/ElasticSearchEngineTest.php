@@ -4,8 +4,8 @@ namespace Tests\Unit\Engines;
 
 use App\Product;
 use Laravel\Scout\Builder;
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
-use Matchish\ScoutElasticSearch\Engines\ElasticSearchEngine;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\Engines\ElasticSearchEngine;
 use Tests\TestCase;
 
 class ElasticSearchEngineTest extends TestCase

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Matchish\ScoutElasticSearch\Searchable;
+namespace Rapidez\ScoutElasticSearch\Searchable;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;

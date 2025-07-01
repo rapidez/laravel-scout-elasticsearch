@@ -3,7 +3,7 @@
 namespace Tests\Unit\ElasticSearch\Params;
 
 use App\Product;
-use Matchish\ScoutElasticSearch\ElasticSearch\Params\Bulk;
+use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Bulk;
 use Tests\TestCase;
 
 class BulkTest extends TestCase

@@ -1,8 +1,8 @@
 <?php
 
-namespace Matchish\ScoutElasticSearch\Jobs\Stages;
+namespace Rapidez\ScoutElasticSearch\Jobs\Stages;
 
-use Matchish\ScoutElasticSearch\Creator\ProxyClient;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
 
 interface StageInterface
 {

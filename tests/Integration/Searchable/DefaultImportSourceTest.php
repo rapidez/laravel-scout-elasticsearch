@@ -6,7 +6,7 @@ use App\Product;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
-use Matchish\ScoutElasticSearch\Searchable\DefaultImportSource;
+use Rapidez\ScoutElasticSearch\Searchable\DefaultImportSource;
 use Tests\TestCase;
 
 class DefaultImportSourceTest extends TestCase
