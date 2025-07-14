@@ -36,6 +36,7 @@ jobs:
             opensearch:
                 image: opensearchproject/opensearch:2
                 options: >-
+                    -e OPENSEARCH_INITIAL_ADMIN_PASSWORD=tNYoP9LMl8bZ
                     -e "discovery.type=single-node"
                     -e "plugins.security.disabled=true"
                     --health-cmd="curl http://localhost:9200/_cluster/health" --health-interval=10s --health-timeout=5s --health-retries=5
