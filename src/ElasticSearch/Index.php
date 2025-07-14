@@ -160,7 +160,7 @@ final class Index
             if (!$type) {
                 return $mapping;
             }
-            if ($mapping['type'] === 'dense_vector' && $type === 'knn_vector') {
+            if ($mapping['type'] === 'knn_vector' && $type === 'dense_vector') {
                 $mapping['element_type'] = $mapping['data_type'];
                 $mapping['dims'] = $mapping['dimension'];
                 unset($mapping['data_type']);

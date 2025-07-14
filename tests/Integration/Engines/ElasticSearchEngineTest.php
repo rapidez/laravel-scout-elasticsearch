@@ -6,6 +6,7 @@ use App\Product;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Builder;
 use Laravel\Scout\Searchable;
+use Rapidez\ScoutElasticSearch\Creator\Helper;
 use Rapidez\ScoutElasticSearch\ElasticSearch\Index;
 use Rapidez\ScoutElasticSearch\ElasticSearch\Params\Indices\Create;
 use Rapidez\ScoutElasticSearch\Engines\ElasticSearchEngine;
@@ -94,7 +95,7 @@ final class ElasticSearchEngineTest extends IntegrationTestCase
                 ],
             ],
         ];
-        $response = $this->elasticsearch->search($params)->asArray();
+        $response = Helper::convertToArray($this->elasticsearch->search($params));
         $this->assertArrayHasKey('hits', $response);
         $this->assertArrayHasKey('total', $response['hits']);
         $this->assertArrayHasKey('value', $response['hits']['total']);
@@ -119,7 +120,7 @@ final class ElasticSearchEngineTest extends IntegrationTestCase
                 ],
             ],
         ];
-        $response = $this->elasticsearch->search($params)->asArray();
+        $response = Helper::convertToArray($this->elasticsearch->search($params));
         $this->assertArrayHasKey('hits', $response);
         $this->assertArrayHasKey('total', $response['hits']);
         $this->assertArrayHasKey('value', $response['hits']['total']);

@@ -4,8 +4,8 @@ namespace Rapidez\ScoutElasticSearch;
 
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\Client as ElasticsearchClient;
-use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
 use OpenSearch\Client as OpenSearchClient;
+use Rapidez\ScoutElasticSearch\Creator\ProxyClient;
 use Elastic\Transport\Exception\NoNodeAvailableException;
 use Tests\TestCase;
 
@@ -53,11 +53,28 @@ class ScoutElasticSearchServiceProviderTest extends TestCase
         } catch (NoNodeAvailableException $e) {
             $this->assertTrue(true);
         }
-        $this->assertEquals('elastic:pass', $client->getTransport()->getLastRequest()->getUri()->getUserInfo());
+        if (config('elasticsearch.backend_type') === 'opensearch') {
+            /** @var OpenSearchClient $opensearchClient */
+            $opensearchClient = $client->getInheritance();
+
+            $reflection = new \ReflectionClass($opensearchClient);
+            $property = $reflection->getProperty('transport');
+            $property->setAccessible(true);
+            /** @var \Opensearch\Transport $transport */
+            $transport = $property->getValue($opensearchClient);
+
+            $this->assertEquals('elastic:pass', $transport->getLastConnection()->getUserPass());
+        } else {
+            /** @var ElasticsearchClient $client */
+            $this->assertEquals('elastic:pass', $client->getTransport()->getLastRequest()->getUri()->getUserInfo());
+        }
     }
 
     public function test_config_with_cloud_id()
     {
+        if (config('elasticsearch.backend_type') !== 'elasticsearch') {
+            $this->markTestSkipped('Opensearch does not do cloud_id.');
+        }
         $this->app['config']->set('elasticsearch.cloud_id', 'Test:ZXUtY2VudHJhbC0xLmF3cy5jbG91ZC5lcy5pbyQ0ZGU0NmNlZDhkOGQ0NTk2OTZlNTQ0ZmU1ZjMyYjk5OSRlY2I0YTJlZmY0OTA0ZDliOTE5NzMzMmQwOWNjOTY5Ng==');
         $this->app['config']->set('elasticsearch.api_key', '123456');
         $this->app['config']->set('elasticsearch.user', null);
