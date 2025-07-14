@@ -89,7 +89,7 @@ jobs:
                     ELASTICSEARCH_HOST: '127.0.0.1:${{ matrix.search.port }}'
 
             - name: Upload coverage results
-              uses: actions/upload-artifact@v4g
+              uses: actions/upload-artifact@v4
               if: matrix.php-version == '8.3' && matrix.search.backend == 'elasticsearch'
               with:
                   name: coverage-report
