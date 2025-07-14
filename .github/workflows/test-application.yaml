@@ -22,12 +22,8 @@ jobs:
                 search:
                     - backend: 'opensearch'
                       port: 9201
-                      user: 'admin'
-                      password: 'tNYoP9LMl8bZ'
                     - backend: 'elasticsearch'
                       port: 9200
-                      user: ''
-                      password: ''
         services:
             elasticsearch:
                 image: docker.elastic.co/elasticsearch/elasticsearch:7.17.1
@@ -40,9 +36,9 @@ jobs:
             opensearch:
                 image: opensearchproject/opensearch:2
                 options: >-
-                    -e OPENSEARCH_INITIAL_ADMIN_PASSWORD=tNYoP9LMl8bZ
                     -e "discovery.type=single-node"
-                    --health-cmd="curl -f -u admin:tNYoP9LMl8bZ http://localhost:9200/_cluster/health"
+                    -e "plugins.security.disabled=true"
+                    --health-cmd="curl http://localhost:9200/_cluster/health" --health-interval=10s --health-timeout=5s --health-retries=5
                 ports:
                     - 9201:9200
 
@@ -90,8 +86,6 @@ jobs:
                     DB_USERNAME: root
                     SCOUT_SEARCH_BACKEND: ${{ matrix.search.backend }}
                     ELASTICSEARCH_HOST: '127.0.0.1:${{ matrix.search.port }}'
-                    ELASTICSEARCH_USER: ${{ matrix.search.user }}
-                    ELASTICSEARCH_PASSWORD: ${{ matrix.search.password }}
 
             - name: Upload coverage results
               uses: actions/upload-artifact@v4
