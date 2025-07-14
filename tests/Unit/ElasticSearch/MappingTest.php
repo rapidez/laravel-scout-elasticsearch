@@ -14,6 +14,7 @@ class MappingTest extends TestCase
             ],
             'dense_vector_field' => [
                 'type' => 'dense_vector',
+                'element_type' => 'float',
                 'dims' => 128,
             ],
         ],
@@ -26,7 +27,8 @@ class MappingTest extends TestCase
             ],
             'dense_vector_field' => [
                 'type' => 'knn_vector',
-                'dims' => 128,
+                'data_type' => 'float',
+                'dimension' => 128,
             ],
         ],
     ];
@@ -45,7 +47,7 @@ class MappingTest extends TestCase
     {
         $this->assertEquals(
             self::ELASTICSEARCH_MAPPING,
-            Index::transformElasticsearchToOpensearchMapping(
+            Index::transformOpensearchToElasticsearchMapping(
                 self::OPENSEARCH_MAPPING
             )
         );
