@@ -8,7 +8,7 @@ on:
 
 jobs:
     php:
-        name: 'Run tests with php ${{ matrix.php-version }}'
+        name: 'Run tests with php ${{ matrix.php-version }} on ${{ matrix.search.backend }}'
         runs-on: ubuntu-latest
 
         strategy:
